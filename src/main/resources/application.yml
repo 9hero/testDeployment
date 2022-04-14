@@ -1,0 +1,31 @@
+cloud:
+  aws:
+    credentials:
+      profile-name: stratospheric
+    s3:
+      bucket: 9hero
+    region:
+      static: ap-northeast-2
+    stack:
+      auto: false
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/postgres
+#    username: postgres
+#    password: root
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
